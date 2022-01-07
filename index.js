@@ -11,6 +11,7 @@ app.use(
 
 app.get("/breeds/:name", breedController.getBreeds);
 app.get("/images/:name", breedController.getImages);
+app.get("/mostSearched", breedController.getMostSearched);
 
 app.listen(3000, () => {
   console.log("Listening on 3000");
