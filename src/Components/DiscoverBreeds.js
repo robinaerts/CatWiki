@@ -8,7 +8,9 @@ const DiscoverBreeds = () => {
   const [mostSearched, setMostSearched] = useState([]);
 
   const getMostSearched = async () => {
-    const images = await axios.get("http://192.168.3.37:3000/mostsearched");
+    const images = await axios.get(
+      "https://robinaerts-catwiki.herokuapp.com/mostsearched"
+    );
     const sorted = images.data.breeds.sort((a, b) => a.place - b.place);
     setMostSearched(sorted.slice(0, 4));
   };
@@ -20,7 +22,7 @@ const DiscoverBreeds = () => {
   const requestBreedNames = async (e) => {
     if (e.target.value.length < 2) return setDropdownBreeds([]);
     const breeds = await axios.get(
-      "http://192.168.3.37:3000/breeds/" + e.target.value
+      "https://robinaerts-catwiki.herokuapp.com/breeds/" + e.target.value
     );
     setDropdownBreeds(breeds.data.breeds);
   };

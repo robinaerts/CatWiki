@@ -11,7 +11,9 @@ const BreedInfo = () => {
   const { id } = useParams();
 
   const getBreedImages = async () => {
-    const images = await axios.get("http://192.168.3.37:3000/images/" + id);
+    const images = await axios.get(
+      "https://robinaerts-catwiki.herokuapp.com/images/" + id
+    );
     console.log(images.data.images);
     setBreed(images.data.images[0].breeds[0]);
     setImages(images.data.images);

@@ -7,7 +7,9 @@ const MostSearched = () => {
   const [mostSearched, setMostSearched] = useState([]);
 
   const getMostSearched = async () => {
-    const images = await axios.get("http://192.168.3.37:3000/mostsearched");
+    const images = await axios.get(
+      "https://robinaerts-catwiki.herokuapp.com/mostsearched"
+    );
     const sorted = images.data.breeds.sort((a, b) => a.place - b.place);
     setMostSearched(sorted);
   };
