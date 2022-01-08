@@ -19,6 +19,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 .App {
@@ -123,7 +124,7 @@
 }
 
 .cat-image {
-  width: 280px;
+  min-width: 280px;
   height: 280px;
   border-radius: 24px;
   object-fit: cover;
@@ -155,13 +156,18 @@
   font-family: "Mystery Quest", cursive;
 }
 
+#most-searched-container {
+  width: 80%;
+  margin: 4rem auto;
+}
+
 .most-searched-breed-container {
   display: flex;
+  flex: 2 1;
   align-items: center;
   margin: 2rem auto;
   gap: 3rem;
   justify-content: space-evenly;
-  width: 80%;
 }
 
 .most-searched-breed-container > img {
@@ -251,7 +257,7 @@ a {
 }
 
 #discover-bottom-container {
-  height: 60vh;
+  padding-bottom: 4rem;
   width: 100%;
   background-color: #e3e1dc;
   border-bottom-left-radius: 40px;
@@ -260,8 +266,9 @@ a {
 
 #discover-bottom-images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   margin-top: 3rem;
 }
 
@@ -278,4 +285,140 @@ a {
   width: 80%;
   display: flex;
   justify-content: space-between;
+}
+
+#why-cat-container {
+  margin: 20vh auto;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+}
+
+#why-cat-text {
+  width: 50%;
+}
+
+#why-cat-images {
+  display: flex;
+  gap: 2rem;
+}
+
+#home-1 {
+  width: 270px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+#home-3 {
+  width: 240px;
+  height: 385px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+#home-2 {
+  width: 195px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+#why-cat-images-first-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+#why-cat-headline {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+#why-cat-read-more {
+  font-weight: bold;
+  color: gray;
+}
+
+#top-line-why-cat {
+  padding-top: 2rem;
+  border-top: 3px solid black;
+}
+
+#footer-container {
+  margin: 0 auto;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+  background-color: black;
+  color: white;
+  width: 85vw;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.catwiki-logo-footer {
+  display: flex;
+}
+
+.catwiki-text-footer {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Mystery Quest", cursive;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 990px) {
+  #cat-image-home {
+    display: none;
+  }
+
+  #welcome {
+    margin: 0;
+    text-align: center;
+  }
+
+  #search-list {
+    position: static;
+    margin: 1rem auto;
+  }
+
+  #why-cat-container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  #more-info-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  #breed-properties {
+    width: 90%;
+  }
+
+  .most-searched-breed-container {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #discover-container {
+    width: 90vw;
+  }
+  #why-cat-container {
+    width: 90vw;
+  }
+  #why-cat-text {
+    width: 100%;
+  }
+  #footer-container {
+    width: 100vw;
+  }
 }

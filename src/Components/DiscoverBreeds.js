@@ -42,11 +42,9 @@ const DiscoverBreeds = () => {
             <div id="search-list">
               {dropdownBreeds.map((breed) => {
                 return (
-                  <div className="search-list-item">
-                    <Link key={breed.id} to={"/info/" + breed.id}>
-                      {breed.name}
-                    </Link>
-                  </div>
+                  <Link key={breed.id} to={"/info/" + breed.id}>
+                    <div className="search-list-item">{breed.name}</div>
+                  </Link>
                 );
               })}
             </div>
@@ -62,10 +60,12 @@ const DiscoverBreeds = () => {
         <div id="discover-bottom-images">
           {mostSearched.map((breed) => {
             return (
-              <div>
-                <img className="cat-image-home" src={breed.url} />
-                <h3>{breed.breeds[0].name}</h3>
-              </div>
+              <Link to={"/info/" + breed.breeds[0].id}>
+                <div>
+                  <img className="cat-image-home" src={breed.url} />
+                  <h3>{breed.breeds[0].name}</h3>
+                </div>
+              </Link>
             );
           })}
         </div>
