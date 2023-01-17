@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap");
+
+#search-list::-webkit-scrollbar,
+#search-list::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+#search-list::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SCORES */
+.score-piece {
+  width: 60px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.score-piece-filled {
+  background-color: #544439;
+}
+
+.score-piece-empty {
+  background-color: #e0e0e0;
+}
+
+#score-pieces-container {
+  /* margin-top: 1rem; */
+  display: flex;
+  gap: 0.7rem;
+}
+/* END SCORES */
+
+.score-property-container {
+  display: grid;
+  grid-template-columns: 10rem auto;
+  margin: 1.5rem 0;
+  gap: 2rem;
+}
+
+.property-text {
+  font-weight: bold;
+}
+
+#breed-head-image {
+  width: 370px;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+#more-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+  gap: 8rem;
+}
+
+#breed-properties {
+  width: 55%;
+}
+
+#real-images-container {
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cat-image {
+  min-width: 280px;
+  height: 280px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+#images-container {
+  margin-top: 10vh;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#full-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  margin-bottom: 10vh;
+}
+
+.catwiki-logo {
+  position: absolute;
+  top: 1rem;
+  left: 4rem;
+  display: flex;
+}
+
+.catwiki-text {
+  font-size: 1.5rem;
+  color: #291507;
+  font-family: "Mystery Quest", cursive;
+}
+
+#most-searched-container {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+.most-searched-breed-container {
+  display: flex;
+  flex: 2 1;
+  align-items: center;
+  margin: 2rem auto;
+  gap: 3rem;
+  justify-content: space-evenly;
+}
+
+.most-searched-breed-container > img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+}
+
+#discover-container {
+  width: 70vw;
+  border-radius: 12px;
+  margin: 10vh auto;
+}
+
+#catwiki-home {
+  font-family: "Mystery Quest", cursive;
+  margin-bottom: 1rem;
+}
+
+#discover-top-container {
+  color: white;
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+}
+
+#cat-image-home {
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 40px;
+}
+
+#welcome {
+  margin-left: 4rem;
+  padding-top: 5rem;
+}
+
+#search-breed-input {
+  margin-top: 2rem;
+  width: 300px;
+  height: 60px;
+  border-radius: 60px;
+  padding-left: 2rem;
+  border: none;
+}
+
+#search-breed-input:focus {
+  outline: none;
+  border: none;
+}
+
+#search-list {
+  margin-top: 10px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.search-list-item {
+  z-index: 5;
+  height: 50px;
+  width: 100%;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+.search-list-item:hover {
+  background: #9797971a;
+  border-radius: 20px;
+}
+
+#discover-bottom-container {
+  padding-bottom: 4rem;
+  width: 100%;
+  background-color: #e3e1dc;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+#discover-bottom-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cat-image-home {
+  width: 220px;
+  height: 220px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+#discover-bottom-text-container {
+  padding-top: 3rem;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#why-cat-container {
+  margin: 20vh auto;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+}
+
+#why-cat-text {
+  width: 50%;
+}
+
+#why-cat-images {
+  display: flex;
+  gap: 2rem;
+}
+
+#home-1 {
+  width: 270px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+#home-3 {
+  width: 240px;
+  height: 385px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+#home-2 {
+  width: 195px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+#why-cat-images-first-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+#why-cat-headline {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+#why-cat-read-more {
+  font-weight: bold;
+  color: gray;
+}
+
+#top-line-why-cat {
+  padding-top: 2rem;
+  border-top: 3px solid black;
+}
+
+#footer-container {
+  margin: 0 auto;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+  background-color: black;
+  color: white;
+  width: 85vw;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.catwiki-logo-footer {
+  display: flex;
+}
+
+.catwiki-text-footer {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Mystery Quest", cursive;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 990px) {
+  #cat-image-home {
+    display: none;
+  }
+
+  #welcome {
+    margin: 0;
+    text-align: center;
+  }
+
+  #search-list {
+    position: static;
+    margin: 1rem auto;
+  }
+
+  #why-cat-container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  #more-info-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  #breed-properties {
+    width: 90%;
+  }
+
+  .most-searched-breed-container {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #discover-container {
+    width: 90vw;
+  }
+  #why-cat-container {
+    width: 90vw;
+  }
+  #why-cat-text {
+    width: 100%;
+  }
+  #footer-container {
+    width: 100vw;
+  }
+}
