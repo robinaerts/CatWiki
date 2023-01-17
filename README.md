@@ -10,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/robinaerts/CatWiki">
+    <a href="https://github.com/robinaerts/CatWikiApi">
       Solution
     </a>
     <span> | </span>
